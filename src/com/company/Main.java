@@ -10,13 +10,13 @@ public class Main {
         Scanner obj = new Scanner(System.in);
         System.out.println("Submit word");
         //Sort the String
-        String str = main.sort(obj.next());
+        String str = main.sort(obj.next()); // O(nlogn)
         //System.out.println(str);
         main.permutations("", str);
 
     }
     //Find permutations in increasing order using recursion
-    public void permutations(String prefix, String str) {
+    public void permutations(String prefix, String str) { //O(n*n!)
         int length = str.length();
 
         if (length == 0)
